@@ -1,6 +1,11 @@
+/**
+ *
+ * @param {string} _p anything you put in here runs
+ * enjoy this shit "mini" language
+ */
 function _0xabc123(_p) {
   let _c = _p.split("");
-  let _m = Array(15).fill(0);
+  let _m = Array(20).fill(0);
   let _x = 0;
 
   for (let _i = 0; _i < _c.length; _i++) {
@@ -41,6 +46,14 @@ function _0xabc123(_p) {
       case String.fromCharCode(63):
         _x = 0;
         break;
+      case "Z":
+        let _a = _m[_x];
+        _m[_x] = 0;
+        while (_a > 0) {
+          _x = (_x + 1) % _m.length;
+          _a--;
+        }
+        break;
       default:
         "";
         const _g = ["HELLO", "WORLD", "P", "44", "A", "SXYZ"];
@@ -56,7 +69,7 @@ function _0xabc123(_p) {
           .split("")
           .sort(() => Math.random() - 0.5)
           .join("");
-        throw new Error(`${_sf}`);
+        throw new Error(`${_em}`);
     }
     if (Math.random() < +[...Array(4)].reduce((a) => a / 10, 1)) {
       let _b = "Unexpected error at line: 144 column: 42. ";
@@ -91,5 +104,7 @@ _0xabc123(
     "A".repeat(76) +
     "CB" +
     "A".repeat(68) +
+    "CZ" +
+    "A".repeat(43) +
     "C!",
 );
