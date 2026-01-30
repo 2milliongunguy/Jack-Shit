@@ -8,3 +8,4 @@
   - useless layers of indirection
   - misleading names
   - dead code that looks important
+- all updates must be able to run the feature you added and also log "HELLO WORLD+"
